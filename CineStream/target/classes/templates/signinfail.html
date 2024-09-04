@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "poppins",sans-serif;
+}
+body{
+	min-height: 100vh;
+	background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://res.cloudinary.com/dsqyxk24i/image/upload/v1720085315/rkhbwkreofz78fz4vdrr.png);
+	background-size: cover;background-position: center;
+}
+.header{
+	position: sticky;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px 0;
+	margin-left: 10px;
+	position: sticky;
+}
+nav p{
+    color:#f01c1c;
+    cursor:pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 28px;
+}
+nav p span{
+    font-size: 35px;
+}
+.content{
+	
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.content h1{
+	color:red;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.content p{
+	color: rgb(241, 28, 0);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signup{
+    margin-top: 30px;
+    overflow:hidden;
+}
+
+.email-signup button{
+    background-color: #db0001;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+	width: 100px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<nav>
+			<p><span>M</span>OVIEFLIX</p>
+		</nav>
+	</div>
+	<div class="content">
+		<h1>Sign In Failed</h1>
+		<p>Please Enter a valid email and password</p>
+		<form class="email-signup" action="map-signin" method="get">
+			<button type="submit">SignIn</button>
+		</form>
+	</div>
+	<!-- <h2>Sign in failed</h2>
+	<a href="map-signin">SIGN IN AGAIN</a> -->
+</body>
+</html>

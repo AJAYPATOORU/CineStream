@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Users List</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+	*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "poppins",sans-serif;
+	text-decoration: none;
+	}
+	body{
+		/* color: #fff;
+		min-height: 100vh;
+		background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),url(https://res.cloudinary.com/dsqyxk24i/image/upload/v1720085315/rkhbwkreofz78fz4vdrr.png);
+		background-size: cover;
+		background-position: center; */
+		background: #dfe9f5;
+	
+	}
+	.main{
+		display: flex;
+		width: 100%;
+	}
+	nav{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		background-color: #ded7d7;
+		width: 45px;
+		overflow: hidden;
+		transform: width 0.2s linear;
+		box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+	}
+	.logo{
+		text-align: center;
+		display: flex;
+    	align-items: center;
+    	justify-content: left;
+    	padding: 10px 0;
+		transition: all 0.5s ease;
+		color:#f01c1c;
+		cursor:pointer;
+		font-size: 20px;
+		font-weight: bold;
+		font-size: 28px;
+		margin: 10px 0 0 10px;
+	}
+	.logo span{
+		font-weight: bold;
+		padding-left: 2px;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.logo :first-child{
+		/* width: 45px;
+		height: 45px; */
+		padding: 2px;
+		/* border: 2px solid black; */
+		font-size: 40px;
+		/* border-radius: 50%; */
+	}
+
+	a{
+		position: relative;
+		color: rgb(85,83,83);
+		font-size: 14px;
+		display: flex;
+		width: 250px;
+		padding:10px 10px 10px 0px;
+		text-transform: uppercase;
+	}
+	.logo-space{
+		font-size: 38px;
+		padding-top: 15px;
+	}
+	.bx{
+		position: relative;
+		width: 50px;
+		height: 40px;
+		top: 14px;
+		font-size: 20px;
+		text-align: center;
+	}
+	.nav-item{
+		position: relative;
+		top: 12px;
+		margin-left: 10px;
+	}
+	li a:hover{
+		background: #eee;
+	}
+	nav:hover{
+		width: 250px;
+		transition: all 0.5s ease;
+	}
+	.logout{
+		position: absolute;
+		bottom: 0;
+	}
+	h2{
+		text-align: center;
+		color: #fff;
+		background-color: red;
+		height: 35px;
+	}
+table {
+  border-collapse: collapse; /* Ensure cells share borders */
+  border: 1px solid #ccc; /* Border around the table */
+  margin-left: 50px;
+}
+
+/* Style for table header (th) */
+th {
+  /* background-color: #f2f2f2; Background color */
+  color: #dcca09; /* Text color */
+  font-weight: bold; /* Bold text */
+  padding: 8px; /* Padding inside cells */
+  border: 1px solid #ccc; /* Border around cells */
+}
+
+/* Style for table rows (alternating colors for better readability) */
+tr:nth-child() {
+  background-color: #f9f9f9; /* Light gray background color */
+}
+
+/* Style for table data cells (td) */
+td {
+  padding: 8px; /* Padding inside cells */
+  border: 1px solid #ccc; /* Border around cells */
+}
+table  a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+table a:hover{
+	cursor: default;
+}
+table #edit{
+	color:white;
+	background-color:blue;
+	border:none;
+	width:70px;
+	height:25px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+table #delete{
+	color:white;
+	background-color:rgb(255, 0, 0);
+	border:none;
+	width:70px;
+	height:25px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+	/* #edit{
+		color:white;
+		background-color:blue;
+		text-decoration:none;
+		border:none;
+		width:70px;
+		height:25px;
+	}
+	#delete{
+		color:white;
+		background-color:orange;
+		text-decoration:none;
+		border:none;
+		width:70px;
+		height:25px;
+	} */
+</style>
+</head>
+<body>
+	<div class="main">
+	<nav>
+		<ul>
+			<li>
+				<a href="admin" class="logo">
+					<span class="log">C</span><span class="logo-space">INESTREAM</span>
+					<!-- <span class="nav-item">MOVIEFLIX</span> -->
+				</a>
+			</li>
+			<li><a href="admin">
+				<i class='bx bxs-home'></i>
+				<span class="nav-item">Home</span>
+			</a></li>
+			<li><a href="#">
+				<i class='bx bxs-user'></i>
+				<span class="nav-item">User</span>
+			</a></li>
+			<li><a href="view-movies">
+				<i class='bx bxs-movie' ></i>
+				<span class="nav-item">View Movies</span>
+			</a></li>
+			<li><a href="/addmovie">
+				<i class='bx bxs-book-add'></i>
+				<span class="nav-item">Add movies</span>
+			</a></li>
+			<li><a href="view-users">
+				<i class='bx bxs-user-account'></i>
+				<span class="nav-item">View Users</span>
+			</a></li>
+			<li class="logout"><a href="logout">
+				<i class='bx bx-log-out'></i>
+				<span class="nav-item">Log out</span>
+			</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<h2>ALL USERS</h2>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Gender</th>
+				<th>Phone</th>
+				<th>Address</th>
+				<th colspan="2">Actions</th>
+			</tr>
+			<tr th:each="users:${users}">
+				<td th:text="${users.name}"></td>
+				<td th:text="${users.email}"></td>
+				<td th:text="${users.gender}"></td>
+				<td th:text="${users.phone}"></td>
+				<td th:text="${users.address}"></td>
+				<td>
+					<a th:href="@{'/edit/'+${users.id}}"><input type="submit" value="UPDATE" id="edit"></a>
+				</td>
+				<td>
+					<a th:href="@{'/delete/'+${users.id}}"><input type="submit" value="DELETE" id="delete"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+</body>
+</html>

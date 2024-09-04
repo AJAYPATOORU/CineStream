@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${movie.moviename}"></title>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body{
+		background-color: rgba(0, 0, 0, 0.753);
+	}
+	p{
+		font-size: 20px;
+		font-family:Roboto;
+		color:rgb(241,241,241);
+		font-weight:700;
+		margin-left: 25px;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<!-- <iframe th:src="${movie.movieLink}" frameborder="0" width="300px" height="200px"></iframe> -->
+		 <video th:src="${movie.movieLink}"  controls controlsList="nodownload" autoplay height="500px\" width="100%"></video>
+		 <p th:text="${movie.moviename}"></p>
+	</div>
+</body>
+</html>
